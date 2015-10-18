@@ -11,7 +11,7 @@ public class World
 	
 	public World()
 	{
-		tri = new Triangle(new Vector3((float)(Window.WIDTH / 2.0), (float) (Window.HEIGHT / 2.0), 5.0f));
+		tri = new Triangle(new Vector3((float)(Window.WIDTH / 2.0), (float) (Window.HEIGHT / 2.0), 15.0f));
 	}
 	
 	public void update()

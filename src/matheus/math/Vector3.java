@@ -68,6 +68,48 @@ public class Vector3
 		return new Vector3(x2, y2, z2);
 	}
 	
+	/**
+	 * Rotates the vector about the z-axis by the specified degree.
+	 * Does not modify the current object.
+	 * @param degrees - The amount to rotate about the z-axis, in degrees.
+	 * @return A new Vector2 object.
+	 */
+	public Vector3 rotateX(float degrees)
+	{
+		float angle = (float) Math.toRadians(degrees);
+		float y2 = (float) (y * Math.cos(angle) - z * Math.sin(angle));
+		float z2 = (float) (y * Math.sin(angle) + z * Math.cos(angle));
+		return new Vector3(x, y2, z2);
+	}
+	
+	/**
+	 * Rotates the vector about the y-axis by the specified degree.
+	 * Does not modify the current object.
+	 * @param degrees - The amount to rotate about the y-axis, in degrees.
+	 * @return A new Vector2 object.
+	 */
+	public Vector3 rotateY(float degrees)
+	{
+		float angle = (float) Math.toRadians(degrees);
+		float x2 = (float) (x * Math.cos(angle) + z * Math.sin(angle));
+		float z2 = (float) (x * Math.sin(angle) - z * Math.cos(angle));
+		return new Vector3(x2, y, z2);
+	}
+	
+	/**
+	 * Rotates the vector about the z-axis by the specified degree.
+	 * Does not modify the current object.
+	 * @param degrees - The amount to rotate about the z-axis, in degrees.
+	 * @return A new Vector2 object.
+	 */
+	public Vector3 rotateZ(float degrees)
+	{
+		float angle = (float) Math.toRadians(degrees);
+		float x2 = (float) (x * Math.cos(angle) - y * Math.sin(angle));
+		float y2 = (float) (x * Math.sin(angle) + y * Math.cos(angle));
+		return new Vector3(x2, y2, z);
+	}
+	
 	/**	
 	 * Add two vectors. Does not modify the current object.
 	 * @param other - A Vector3 object.
