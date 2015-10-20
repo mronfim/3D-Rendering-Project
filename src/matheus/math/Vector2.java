@@ -17,6 +17,12 @@ public class Vector2
 		this.y = y;
 	}
 	
+	public Vector2(Vector3 other)
+	{
+		this.x = other.getX();
+		this.y = other.getY();
+	}
+	
 	/**
 	 * Calculates the length (magnitude) of the vector. Does not modify the current object.
 	 * @return A float value.

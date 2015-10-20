@@ -50,7 +50,7 @@ public class Window extends JFrame
 	public void render(double delta)
 	{
 		image.getGraphics().clearRect(0, 0, WIDTH, HEIGHT);
-		world.render(image.getGraphics());
+		world.render(image);
 		display.draw(image);
 	}
 }
